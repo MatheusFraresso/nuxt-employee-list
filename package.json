@@ -10,8 +10,16 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/bridge": "^3.0.1",
+    "nuxi": "^3.10.0",
     "nuxt": "^3.10.0",
+    "sass": "^1.70.0",
+    "vite-plugin-vuetify": "^2.0.1",
     "vue": "^3.4.15",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "vuetify": "^3.5.2"
+  },
+  "dependencies": {
+    "bootstrap-vue": "^2.23.1"
   }
 }

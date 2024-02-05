@@ -12,7 +12,35 @@ export default {
 }
 </script>
 <template>
-  <h1>{{ employee.name }}</h1>
-  <h1>{{ employee.jobTitle }}</h1>
-  <img :src="`${employee.picture}`" />
+  <section id="employee">
+    <v-skeleton-loader
+      type="card"
+      v-if="!employee?.name && !employee?.description && employee?.picture"
+    ></v-skeleton-loader>
+    <v-card v-else variant="tonal">
+      <v-card-title>{{ employee?.name }}</v-card-title>
+      <v-card-subtitle>{{ employee?.jobTitle }}</v-card-subtitle>
+
+      <v-card-text>
+        <v-container>
+          <v-row>
+            <v-col sm="8">
+              {{ employee?.description }}
+            </v-col>
+            <v-col sm="4">
+              <v-img :src="`${employee?.picture}`" :width="200" rounded></v-img>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-card-text>
+    </v-card>
+  </section>
 </template>
+
+<style>
+#employee {
+  padding-left: 20lvw;
+  padding-right: 20lvw;
+  padding-top: 5lvw;
+}
+</style>
