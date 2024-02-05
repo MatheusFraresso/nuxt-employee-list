@@ -15,5 +15,6 @@ npm run dev
 ```
 
 # docker
-
+```bash
 docker pull matheusfraresso/nuxt-employee-list:nuxt-employee-list
+```
